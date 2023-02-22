@@ -58,5 +58,4 @@ const student1 = new Student('52252', 'Michel');
 
 const student2 = new Student('ab52', 'Diego Augusto');
 
-const student3 = new Student('ab52', 'Henrique');
 
