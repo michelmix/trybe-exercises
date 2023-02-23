@@ -26,7 +26,7 @@ export class Student {
 
     set nome(value: string) {
         if (value.length < 3) {
-            throw new Error ('O nome deve conter mais de 3 letras')
+            throw new Error('O nome deve conter mais de 3 letras')
         }
         this._nome = value
     }
@@ -37,7 +37,7 @@ export class Student {
 
     set notaProvas(value: number[]) {
         if (value.length > 4) {
-            throw new Error ('O aluno pode ter somente 4 notas')
+            throw new Error('O aluno pode ter somente 4 notas')
         }
         this._notaProvas = value
     }
@@ -48,9 +48,24 @@ export class Student {
 
     set notaTrabalhos(newValue: number[]) {
         if (newValue.length > 3) {
-            throw new Error ('Cada aluno só pode receber 2 notas de trabalho')
+            throw new Error('Cada aluno só pode receber 2 notas de trabalho')
         }
         this._notaTrabalhos = newValue;
+    }
+
+    somaNotas(): number {
+        return [...this.notaProvas, ...this.notaTrabalhos]
+            .reduce((previousNote, note) => {
+                const nextNote = note + previousNote;
+
+                return nextNote;
+            }, 0);
+    }
+
+    mediaNotas(): number {
+        const somaNotas = this.somaNotas();
+        const quntidadeNotas = this._notaProvas.length + this._notaTrabalhos.length;
+        return somaNotas / quntidadeNotas;
     }
 }
 
@@ -58,5 +73,11 @@ const student1 = new Student('52252', 'Michel');
 
 const student2 = new Student('ab52', 'Diego Augusto');
 
-const student3 = new Student('ab52', 'Henrique');
+const personOne = new Student('202001011', 'Maria da Silva');
+    
+personOne.notaProvas = [25, 20, 23, 23];
+personOne.notaTrabalhos = [45, 45];
 
+console.log(personOne);
+console.log('Soma de todas as notas: ', personOne.somaNotas());
+console.log('Média de todas as notas: ', personOne.mediaNotas());
