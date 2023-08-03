@@ -25,3 +25,4 @@ if __name__ == "__main__":
     print(score(subordinates, 5))
     print(score(subordinates, 6))
     print(score(subordinates, 7))
+
