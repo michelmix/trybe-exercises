@@ -5,7 +5,7 @@ function verifyPalindrome(word) {
 }
 
 console.log(verifyPalindrome('arara'));
-console.log(verifyPalindrome('desenvolvimento'));
+console.log(verifyPalindrome('desenvolvimentos'));
 
 // Requisito 2 - Crie a função getHighestIndex
 
