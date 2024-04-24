@@ -3,19 +3,15 @@ function verifyPalindrome(word) {
   const reverseWord = word.split('').reverse('').join('');
   return word === reverseWord;
 }
-
 // console.log(verifyPalindrome('arara'));
 // console.log(verifyPalindrome('desenvolvimentos'));
-
 // Requisito 2 - Crie a função getHighestIndex
 function getHighestIndex(array) {
   const highestNumber = Math.max(...array);
   return array.indexOf(highestNumber);
 }
-
 // let numeros = [2, 3, 4, 5, 6];
 // console.log(getHighestIndex(numeros));
-
 // Requisito 3 - Crie a função getSmallestIndex
 function getSmallestIndex(array) {
   const highestNumber = Math.min(...array);
