@@ -10,7 +10,7 @@ function verifyPalindrome(word) {
 // Requisito 2 - Crie a função getHighestIndex
 function getHighestIndex(array) {
   const highestNumber = Math.max(...array);
-  return array.indexOf(highestNumber); 
+  return array.indexOf(highestNumber);
 }
 
 let numeros = [2, 3, 4, 5, 6];
@@ -19,11 +19,20 @@ let numeros = [2, 3, 4, 5, 6];
 // Requisito 3 - Crie a função getSmallestIndex
 function getSmallestIndex(array) {
   const highestNumber = Math.min(...array);
-  return array.indexOf(highestNumber); 
+  return array.indexOf(highestNumber);
 }
-console.log(getSmallestIndex(numeros));
+// console.log(getSmallestIndex(numeros))
 
 // Requisito 4 - Crie a função getLongestWord
+function getLongestWord(array) {
+  let maior = '';
+  for (let palavra of array) {
+    if (palavra.length > maior.length) {
+      maior = palavra;
+    }
+  }
+  return maior;
+}
 
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
 
