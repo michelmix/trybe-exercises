@@ -43,7 +43,7 @@ function countHighestNumberMaxOccurrences(array) {
   return count;
 }
 
-array = [9, 1, 2, 3, 9, 5, 7];
+array = [9, 1, 2, 3, 9, 5, 7, 8];
 console.log(countHighestNumberMaxOccurrences(array));
 // Não modifique as linhas abaixo
 module.exports = {
