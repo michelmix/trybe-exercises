@@ -14,11 +14,14 @@ function getHighestIndex(array) {
 }
 
 let numeros = [2, 3, 4, 5, 6];
-console.log(getHighestIndex(numeros));
-
-
+// console.log(getHighestIndex(numeros));
 
 // Requisito 3 - Crie a função getSmallestIndex
+function getSmallestIndex(array) {
+  const highestNumber = Math.min(...array);
+  return array.indexOf(highestNumber); 
+}
+console.log(getSmallestIndex(numeros));
 
 // Requisito 4 - Crie a função getLongestWord
 
