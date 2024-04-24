@@ -13,7 +13,7 @@ function getHighestIndex(array) {
   return array.indexOf(highestNumber);
 }
 
-let numeros = [2, 3, 4, 5, 6];
+// let numeros = [2, 3, 4, 5, 6];
 // console.log(getHighestIndex(numeros));
 
 // Requisito 3 - Crie a função getSmallestIndex
@@ -40,7 +40,7 @@ function countHighestNumberMaxOccurrences(array) {
   let count = 0;
 
   for (let number of array) {
-    if (number == highestNumber) {
+    if (number === highestNumber) {
       count += 1;
     }
   }
